@@ -12,7 +12,7 @@ Example set system property in a bnd run configuration:
 			test.bundle.a, \
 			test.bundle.b"
 			
-Full bnd example to use the equinox console bundle
+Full bnd example to start the lazy equinox 3.8 console bundle:
 
 	-runfw: org.eclipse.osgi;version='[3.8.0.v20120123-1419,3.8.0.v20120123-1419]'
 	-runee: JavaSE-1.6
