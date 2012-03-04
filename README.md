@@ -11,6 +11,18 @@ Example set system property in a bnd run configuration:
 		-runproperties: activate.lazy.bundles=" \
 			test.bundle.a, \
 			test.bundle.b"
+			
+Full bnd example to use the equinox console bundle
+
+	-runfw: org.eclipse.osgi;version='[3.8.0.v20120123-1419,3.8.0.v20120123-1419]'
+	-runee: JavaSE-1.6
+	-runbundles: \
+		org.eclipse.equinox.console,\
+		org.apache.felix.gogo.runtime,\
+		org.apache.felix.gogo.shell,\
+		utils.startLazyBundles
+	-runvm: -Dosgi.console
+	-runproperties: activate.lazy.bundles="org.eclipse.equinox.console"
 	
 	
 ## Download 
