@@ -6,7 +6,7 @@ To start a lazy bundle the system property "activate.lazy.bundles" must contain 
 Format of the system property is a comma separated string. Only bundles with the Bundle-ActivationPolicy lazy
 and which are in defined in the comma separated list will be started by this util bundle.
 
-Example define the system property in a bnd run configuration:
+Example set system property in a bnd run configuration:
 
 		-runproperties: activate.lazy.bundles=" \
 			test.bundle.a, \
@@ -15,7 +15,8 @@ Example define the system property in a bnd run configuration:
 	
 ## Download 
 
-Download the "Start Lazy Bundles" utils bundle from: TODO
+Download the "Start Lazy Bundles" utils bundle from: [here](https://github.com/tux2323/Start-lazy-Bundles/blob/master/cnf/repo/utils.startLazyBundles/utils.startLazyBundles-1.0.0.jar?raw=true
+)
 
 ## Build
 
