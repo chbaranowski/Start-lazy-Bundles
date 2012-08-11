@@ -1,0 +1,19 @@
+Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
+Private-Package: utils.startlazybundles.tests
+
+-runfw: org.eclipse.osgi;version='[3.7.2.v20120110-1415,3.7.2.v20120110-1415]'
+-runee: JavaSE-1.6
+-runsystempackages: sun.reflect
+-runvm: -ea -Dosgi.console
+
+-buildpath: osgi.core;version='4.2.0',\
+	junit.osgi
+
+-runpath: utils.startLazyBundles;version=snapshot
+
+-runbundles:\
+	utils.startLazyBundles.test.bundles.a;version=snapshot
+
+-runproperties:\
+	utils.startLazyBundles.test.bundles.a=activate,\
+	utils.startLazyBundles.test.bundles.b=activate

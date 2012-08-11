@@ -1,11 +1,13 @@
--buildpath: osgi.cmpn;version=4.2.0.200908310645,\
-	osgi.core;version=4.2.0.200908310645
-Bundle-Activator: utils.startlazybundles.Activator
-Private-Package: utils.startlazybundles
-Import-Package: *
+Private-Package: 	utils.startlazybundles
 
+Bundle-Activator: utils.startlazybundles.LazyBundleController
 Bundle-Name: Start lazy Bundles 
 Bundle-Description: This util bundle could be used to start buggy bundles with a Bundle-ActivationPolicy lazy.
 Bundle-Copyright: Christian Baranowski
 Bundle-License: Apache License, Version 2.0
-Bundle-Version: 1.0.0
+Bundle-Version: 2.0.0
+
+Embedded-Activator: utils.startlazybundles.LazyBundleController
+
+-buildpath: osgi.core;version=4.2.0,\
+	osgi.cmpn;version=4.2.0
