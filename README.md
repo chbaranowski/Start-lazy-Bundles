@@ -40,4 +40,34 @@ See also the runbnd demos for the equinox 3.8 console in the utils.startLazyBund
 
 ## Download 
 
-Download the "Start Lazy Bundles" utils bundle from: [here](https://github.com/tux2323/Start-lazy-Bundles/blob/bndtools-v2.0.0/cnf/releaserepo/utils.startLazyBundles/utils.startLazyBundles-2.0.0.jar?raw=true). 
+Download the "Start Lazy Bundles" utils bundle from: [here](https://github.com/tux2323/Start-lazy-Bundles/blob/bndtools-v2.0.0/cnf/releaserepo/utils.startLazyBundles/utils.startLazyBundles-2.0.0.jar?raw=true).
+
+## Build
+
+Build the bundle with apache ant version > 1.8 
+
+	git clone
+	
+	cd utils.startLazyBundles
+	
+	ant clean build
+	
+## Run Integration Tests
+
+	git clone
+	
+	cd utils.startLazyBundles.test.bundles
+	
+	ant clean build
+	
+	cd ..
+	
+	cd utils.startLazyBundles.test
+	
+	ant clean test
+
+## License
+
+Apache License, Version 2.0 (current) 
+	
+	http://www.apache.org/licenses/LICENSE-2.0 
