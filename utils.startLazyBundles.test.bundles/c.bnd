@@ -1,0 +1,3 @@
+Private-Package: bundle.c
+Bundle-Activator: bundle.c.Activator
+Bundle-ActivationPolicy: lazy
