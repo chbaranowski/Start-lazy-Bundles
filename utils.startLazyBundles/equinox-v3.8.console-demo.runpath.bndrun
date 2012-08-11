@@ -1,0 +1,11 @@
+# Run configuration tested with Bndtools Version 2.0.0.alpha01-20120809-190750
+# Add the start lazy bundle to the runpath
+-runpath: utils.startLazyBundles;version='2.0.0'
+-runfw: org.eclipse.osgi;version='3.8.0'
+-runbundles: \
+	org.eclipse.equinox.console,\
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell
+# Activate all lazy bundles with the symbolic name org.eclipse.equinox.console
+-runproperties: org.eclipse.equinox.console=activate,\
+	osgi.console
