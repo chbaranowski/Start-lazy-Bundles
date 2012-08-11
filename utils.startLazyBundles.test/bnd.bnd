@@ -9,7 +9,7 @@ Private-Package: utils.startlazybundles.tests
 -buildpath: osgi.core;version='4.2.0',\
 	junit.osgi
 
--runpath: utils.startLazyBundles;version=2.0.0
+-runpath: utils.startLazyBundles;version=snapshot
 
 -runbundles:\
 	utils.startLazyBundles.test.bundles.a;version=snapshot
