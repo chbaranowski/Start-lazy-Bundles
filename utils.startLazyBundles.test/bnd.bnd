@@ -1,7 +1,7 @@
 Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
 Private-Package: utils.startlazybundles.tests
 
--runfw: org.eclipse.osgi;version='[3.7.2.v20120110-1415,3.7.2.v20120110-1415]'
+-runfw: org.eclipse.osgi;version='3.8.0'
 -runee: JavaSE-1.6
 -runsystempackages: sun.reflect
 
