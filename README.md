@@ -5,7 +5,7 @@ The bundle could be used in bnd / bndtools or any other OSGi environment outside
 
 ## How to use in bnd / bndtools
 
-To use the util bundle in bnd / bndtools download the bundle from [here](https://github.com/tux2323/Start-lazy-Bundles/blob/bndtools-v2.0.0/cnf/releaserepo/utils.startLazyBundles/utils.startLazyBundles-2.0.0.jar?raw=true). 
+To use the util bundle in bnd / bndtools download the bundle from [here](https://github.com/tux2323/Start-lazy-Bundles/blob/bndtools-v2.0.0/cnf/releaserepo/utils.startLazyBundles/utils.startLazyBundles-2.0.1.jar?raw=true). 
 And add the bundle in one of the workspace (cnf) repositories.
 
 Now the util bundle could be used in bnd, for that add the bundle to the -runpath or in the -runbundles option.
@@ -40,7 +40,7 @@ See also the runbnd demos for the equinox 3.8 console in the utils.startLazyBund
 
 ## Download 
 
-Download the "Start Lazy Bundles" utils bundle from: [here](https://github.com/tux2323/Start-lazy-Bundles/blob/bndtools-v2.0.0/cnf/releaserepo/utils.startLazyBundles/utils.startLazyBundles-2.0.0.jar?raw=true).
+Download the "Start Lazy Bundles" utils bundle from: [here](https://github.com/tux2323/Start-lazy-Bundles/blob/bndtools-v2.0.0/cnf/releaserepo/utils.startLazyBundles/utils.startLazyBundles-2.0.1.jar?raw=true).
 
 ## Build
 
