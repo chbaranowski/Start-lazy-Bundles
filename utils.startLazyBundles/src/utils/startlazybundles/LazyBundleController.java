@@ -5,7 +5,7 @@ import org.osgi.framework.BundleContext;
 
 public class LazyBundleController implements BundleActivator {
 	
-	LazyBundlesActivation activation = new LazyBundlesActivation();
+	final LazyBundlesActivation activation = new LazyBundlesActivation();
 	
 	@Override
 	public void start(BundleContext context) throws Exception {
