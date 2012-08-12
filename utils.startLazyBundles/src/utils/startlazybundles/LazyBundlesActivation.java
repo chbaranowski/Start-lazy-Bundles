@@ -24,6 +24,8 @@ public class LazyBundlesActivation implements BundleTrackerCustomizer {
 	static final String TRUE_PROP_VALUE = "true";
 
 	static final String ACTIVATE = "activate";
+	
+	private boolean running;
 
 	BundleTracker bundleTracker;
 
@@ -35,18 +37,26 @@ public class LazyBundlesActivation implements BundleTrackerCustomizer {
 	 * @param context the bundle context should not be null.
 	 */
 	void start(BundleContext context) {
+		if(isRunning()) {
+			throw new IllegalStateException("The tracker is already running!");
+		}
 		this.context = context;
 		bundleTracker = new BundleTracker(context, Bundle.STARTING, this);
 		bundleTracker.open();
+		running = true;
 	}
 
 	/**
 	 * Stops the bundle tracker.
 	 */
 	void stop() {
+		if(!isRunning()) {
+			throw new IllegalStateException("The tracker was not started!");
+		}
 		bundleTracker.close();
 		bundleTracker = null;
 		context = null;
+		running = false;
 	}
 
 	/**
@@ -92,7 +102,7 @@ public class LazyBundlesActivation implements BundleTrackerCustomizer {
 	 * @param bundle
 	 *            the bundle which should be started.
 	 */
-	void tryStartBundle(Bundle bundle) {
+	private void tryStartBundle(Bundle bundle) {
 		try {
 			bundle.start();
 		} catch (BundleException e) {
@@ -139,7 +149,7 @@ public class LazyBundlesActivation implements BundleTrackerCustomizer {
 	 * @return true if the property with the name of the bundle contains the
 	 *         value ACTIVATE.
 	 */
-	boolean isBundleMarkedToActivate(Bundle bundle) {
+	private boolean isBundleMarkedToActivate(Bundle bundle) {
 		String propertyValue = context.getProperty(bundle.getSymbolicName());
 		return propertyValue != null && propertyValue.contains(ACTIVATE);
 	}
@@ -150,9 +160,12 @@ public class LazyBundlesActivation implements BundleTrackerCustomizer {
 	 * @return true if the the property ACTIVATE_ALL_LAZY_BUNDLES is set to
 	 *         true.
 	 */
-	boolean hasToActivateAllLazyBundles() {
+	private boolean hasToActivateAllLazyBundles() {
 		String propertyValue = context.getProperty(ACTIVATE_ALL_LAZY_BUNDLES);
 		return TRUE_PROP_VALUE.equals(propertyValue);
 	}
 
+	public boolean isRunning() {
+		return running;
+	}
 }
