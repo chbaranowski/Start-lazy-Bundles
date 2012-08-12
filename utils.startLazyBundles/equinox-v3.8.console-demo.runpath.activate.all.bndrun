@@ -1,7 +1,7 @@
 # Run configuration tested with Bndtools Version 2.0.0.alpha01-20120809-190750
 
 # Add the start lazy bundle to the runpath
--runpath: utils.startLazyBundles;version=latest
+-runpath: utils.startLazyBundles;version='2.0.1'
 
 -runfw: org.eclipse.osgi;version='3.8.0'
 

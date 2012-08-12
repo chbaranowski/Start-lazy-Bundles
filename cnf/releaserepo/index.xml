@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1344698603184' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1344766149946' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='utils.startLazyBundles'/>
@@ -19,6 +19,33 @@
     <capability namespace='osgi.wiring.host'>
       <attribute name='osgi.wiring.host' value='utils.startLazyBundles'/>
       <attribute name='bundle-version' type='Version' value='2.0.0'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='utils.startLazyBundles'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='2.0.1'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='2951c54b776ba9684bc0bb07a90613503349888a6d5b2b4832051ca7f05b8be8'/>
+      <attribute name='url' value='utils.startLazyBundles/utils.startLazyBundles-2.0.1.jar'/>
+      <attribute name='size' type='Long' value='5827'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='utils.startLazyBundles'/>
+      <attribute name='bundle-version' type='Version' value='2.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='utils.startLazyBundles'/>
+      <attribute name='bundle-version' type='Version' value='2.0.1'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))'/>

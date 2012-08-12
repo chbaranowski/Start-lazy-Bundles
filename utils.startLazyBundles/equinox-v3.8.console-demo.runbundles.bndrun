@@ -3,7 +3,7 @@
 -runfw: org.eclipse.osgi;version='3.8.0'
 
 # Add the start lazy bundles to the runbundles or runrequires option
--runbundles: utils.startLazyBundles;version=2.0.0,\
+-runbundles: utils.startLazyBundles;version=2.0.1,\
 	org.eclipse.equinox.console;version=1.0.0,\
 	org.apache.felix.gogo.runtime;version=0.8.0,\
 	org.apache.felix.gogo.shell;version=0.8.0
