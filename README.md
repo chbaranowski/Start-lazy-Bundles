@@ -21,8 +21,9 @@ Full bnd example to start the lazy equinox 3.8 console bundle:
 		org.apache.felix.gogo.runtime,\
 		org.apache.felix.gogo.shell,\
 		utils.startLazyBundles
-	-runvm: -Dosgi.console
-	-runproperties: activate.lazy.bundles="org.eclipse.equinox.console"
+	-runproperties:\
+		activate.lazy.bundles="org.eclipse.equinox.console",\
+		osgi.console=""
 	
 	
 ## Download 
